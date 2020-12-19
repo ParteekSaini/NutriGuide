@@ -1,0 +1,386 @@
+/**************** Student Name: Parteek Saini ****************/
+/**************** Student ID: 300323311 ****************/
+
+
+/**************** html selectros ****************/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif, Arial, Helvetica;
+    text-align: justify;
+}
+
+body{
+    margin: auto;
+    width: 85%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-size: 19px;
+    line-height: 30px;
+}
+
+header nav{
+    flex: 1;
+    font-size: 24px;
+    background-color: black;
+    width: 100%;
+    overflow: auto;
+}
+
+header h1{
+    width: 250px;
+    color: white;
+    font-family: Georgia;
+    font-size: 40px;
+    background-color: black;
+    padding: 3px 10px;
+    text-shadow: 0 1px 5px #FF0000, 0 5px 10px gold;
+}
+
+header nav a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+header nav a:hover{
+    color: goldenrod;
+}
+
+header nav a:active{
+    color: rgb(122, 93, 17);
+}
+
+article{
+    flex:1;
+    border-left: black 10px solid;
+    border-right: black 10px solid;
+    border-top: wheat 10px solid;
+    border-bottom: wheat 10px solid;
+}
+
+section{
+    padding: 10px;
+}
+
+section h2{
+    font-size: 25px;
+    line-height: 40px;
+}
+
+section li{
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+ul, ol{
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+legend{
+    background-color: slategray;
+    padding: 8px;
+    border-radius: 0.5em;
+    color:whitesmoke;
+    margin-left: 2%;
+}
+
+fieldset{
+    width: 99%;
+    margin: 15px;
+    padding-right: 5px;
+}
+
+
+form div{
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+form div label{
+    float: left;
+    width: 25%;
+    
+}
+
+input{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=radio]{
+    width: 5%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=submit]{
+    width: 36%;
+    margin-right: 3%;
+}
+
+input[type=reset]{
+    width: 36%;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 5px;
+    margin-bottom: 20px;
+    width: 99%;
+    text-align: left;
+}
+
+table caption{
+    font-size: 23px;
+    line-height: 35px;
+    background-color: goldenrod;
+    padding-top: 3px;
+    border: solid black 1px;
+}
+
+table thead{
+    background-color: wheat;
+}
+
+th, td{
+    margin: 5px;
+    padding: 8px;
+    border: solid black 1px;
+}
+
+tfoot{
+    font-size: 12px;
+    line-height: 16px;
+    /* margin: 2px; */
+    background-color: wheat;
+}
+
+tfoot tr td{
+    margin: 1px;
+    padding: 2px;
+}
+
+img{
+    margin: auto;
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+}
+
+footer nav{
+    font-size: 20px;
+    background-color: black;
+    padding: 10px;
+}
+
+footer nav a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding-right: 10px;
+}
+
+footer nav a:hover{
+    color: goldenrod;
+}
+
+footer nav a:active{
+    color: rgb(122, 93, 17);
+}
+
+
+/**************** class selectors ****************/
+
+.active_nav{
+    background-color: goldenrod;
+}
+
+.active_nav:hover{
+    color: black;
+}
+
+.active_nav:active{
+    color: rgb(122, 93, 17);
+}
+
+.text_color{
+    text-shadow: 0 0 2px #FF0000;
+}
+
+.text_color_line{
+    text-shadow: 0 0 3px #FF0000;
+    text-decoration: underline;
+}
+
+.setWidth{
+    width: 46%;
+}
+#video{
+    text-align: center;
+    overflow: auto;
+}
+
+
+/**************** id selectors ****************/
+
+#head{
+    background-color: black;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+#output{
+    margin: 5px;
+    padding: 5px;
+    line-height: 25px;
+}
+
+#out{
+    height: auto;
+}
+
+#weightLoss{
+    display: none;
+    flex-wrap: wrap;  
+}
+
+#maintainWeight{
+    display: none;
+    flex-wrap: wrap;  
+}
+
+#gainWeight{
+    display: none;
+    flex-wrap: wrap;  
+}
+
+#background_image{
+    /* border: black 2px solid; */
+    background-image: url(../images/nutrition2.jpg);
+    min-width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+#disclaimer{
+    font-size: x-small;
+    margin: 2px;
+}
+
+#page_4_disc{
+    margin-top: 2px;
+}
+
+
+
+/**************** media queries ****************/
+
+@media screen and (min-width:1025px) and (max-width:1300px){
+    header nav{
+        font-size: 21px;
+        background-color: black;
+    }
+    header nav a{
+        padding: 10px 0px;
+        width: 25%;
+    }
+    #page_4_disc{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1024px){
+    header nav{
+        font-size: 18px;
+        background-color: black;
+    }
+    header nav a{
+        padding: 10px 0px;
+        width: 50%;
+    }
+    #page_4_disc{
+        padding-top: 40px;
+    }
+    .setWidth{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    body{
+        margin: auto;
+        width: 95%;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+    }
+    header nav a{
+        padding: 10px 0px;
+        width: 100%;
+    }
+    #page_4_disc{
+        padding-top: 65px;
+        padding-bottom: 25px;
+    }
+    .setWidth{
+        width: 100%;
+    }
+    #NutritionSources table caption{
+        font-size: 13px;
+    }
+    #NutritionSources table tr, #NutritionSources table th, #NutritionSources table td{
+        font-size: 13px;
+        overflow: auto;
+    }
+    #NutritionSources table tfoot td{
+        font-size: 12px;
+    }
+    iframe{
+        width: auto;
+        height: auto;
+    }
+}
