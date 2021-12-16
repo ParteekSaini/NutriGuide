@@ -1,0 +1,828 @@
+<!doctype html>
+
+<html lang ="en">
+    
+    <!--
+		Student Name: Parteek Saini
+		Student ID: 300323311
+    -->
+
+    <head>
+        <title>NutriGuide</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Parteek Saini">
+        <link href="css/style_PSa23311.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="css/tablesPage4_PSa23311.css"> -->
+    </head>
+
+    <body onload="currentWidth()">
+
+        <div id="wrapper">
+
+            <header>
+                <div id="head">
+                    <div id="movingDiv"><h1 id="h1">NutriGuide</h1></div>
+                </div>
+
+                <nav>    
+                    <a href="index_PSa23311.html">Home</a>
+                    <a href="NutritionSources_PSa23311.html">Nutrition Sources</a>
+                    <a href="CalorieGuide_PSa23311.html">Calorie Guide</a>
+                    <a class="active_nav" href="MealGuide_PSa23311.html">Meal Guide</a>
+                </nav>
+            </header>
+    
+            <article>
+
+                <div id="background_image"></div>
+
+                <section>
+                    <p>This meal guide is only for carlories requirements rannging from 1500 cal to 3500 cal which
+                        is mainly divided into 3 catagories - Weight lose, Maintain Weight , Weight Gain.
+                    </p>
+
+                    <form action="" method="GET" enctype="application/x-www-form-urlencoded">
+                        <fieldset>
+                            <legend>Meal Guide Tool</legend>
+
+                            <div>
+                                <label for="mealChoices">Meal Choices</label>
+                                <input type="text" name="mealChoices" id="mealChoices" required list="mealChoicesList">
+                                <datalist id="mealChoicesList">
+                                <option value="Weight Lose">Calories ranging from 1500 cal to 2000 cal</option>
+                                <option value="Maintain Weight">Calories ranging from 2000 to 3000 cal</option>
+                                <option value="Weight gain">calories ranging from 3000 cal to 3500 cal</option>
+                                </datalist>
+                                
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Submit" id="submit" onclick="return mealGuide(form);">
+                                <input type="reset" value="Reset" id="reset" onclick="return resetMealData(form);">
+                            </div>
+                            <div id="page_4_disc">
+                            
+                                <small id="disclaimer">
+                                    
+                                    Disclaimer: Meal Tool Guide has been designed to show possible meal options 
+                                    according to the calorie requirements which has been mainly divided into 3 
+                                    broad categories. However, calories requirement of a particular individual may
+                                     vary depending upon depending upon different aspects such as weight training, 
+                                     body weight and physique goal. The weight loss meal option shown by Meal Tool 
+                                     Guide can easily be Weight Gain Meal for an individual because of different
+                                    calories intake needs due to physique variation, gender, age, weight, and height. <br>
+
+                                     References: The meal options for all  categories has been taken from
+                                      “Gurnmann Fitness programs named as ’Shredded next level’ , ‘Size8’ , 
+                                      and ‘Mass-up’  for Weight Loss, Maintain Weight and Gain Weight meal choices respectively.”
+
+                                </small>
+
+                            </div>
+                            <div></div>
+                        </fieldset>
+                    </form>
+                </section>
+                <!--*********** Meal options for weight loss starts from here ******************************-->
+                <section id="weightLoss">
+                    <fieldset id="weightLossBreakfast" class="setWidth">
+                        <legend>Breakfast</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Super Oats</th>
+                                </tr>
+                            </thead>
+                                
+                            <tbody>
+                                <tr>
+                                    <td>1/2scp Whey Protein </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2cup Oats</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Chia Seeds</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4 Boiled Egg Whites</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' - cal-322, Protein-28g, Carbs-30g, fat-10g</td>
+                                </tr>
+
+                                <tr>
+                                    <td>scp-Scoop, sp-Spoon, 1 cup-125g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="weightLossLunch"class="setWidth">
+                        <legend>Lunch</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Chicken Salad</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>100g Boiled or Grilled Chicken</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 cup Cucumber</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3sp Tomato, 1 Large Carrot</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 Whole Egg</td>
+                                </tr>
+
+                                <tr>
+                                    <td>20g Walnuts</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-326, Protein-25g, Carbs-25g, Fat-14g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="weightLossDinner" class="setWidth">
+                        <legend>Dinner</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Veggie Bowl with Chicken</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1/2 cup Brown Rice</td>
+                                </tr>
+
+                                <tr>
+                                    <td>80g Chicken Breast</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2cup Chick Peas</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3sp Green Onion, 3sp Tomato</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 Lemon, 1/2 sp Coconut Oil</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2cup Green Bell Pepper, 1/2cup Cauliflower</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-355, Protein-30g, Carbs-25g, Fat-15g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="weightLossSnack1" class="setWidth">
+                        <legend>Snack 1</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Banana Protein</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1 Banana</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Peanut Butter</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Peanuts</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1scp Whey Protein</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-315, Protein-30g, Carbs-30g, Fat-15g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="weightLossSnack2" class="setWidth">
+                        <legend>Snack 2</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Omelete</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>6 Egg Whites</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 Orange or Apple</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-240, Protein-24g, Carbs-16g, Fat-0g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="weightLosssnack3" class="setWidth">
+                        <legend>Snack 3</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Milk Protein</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>2/3scp Whey Protein</td>
+                                </tr>
+
+                                <tr>
+                                    <td>240ml Almond Milk</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2sp Ground Flexseeds</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-355, Protein-24g, Carbs-7g, Fat-15g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+                    <p>Total Macros' breakdown cal-1913 <br> You can drop or add Snacks in order to cutomise 
+                    your meal according to your specific Calories requirement </p>
+                    
+                </section>
+                <!--*********** Meal options for weight loss ends here ******************************-->
+
+
+                <!--*********** Meal options for weight maintain starts from here ******************************-->
+                <section id="maintainWeight">
+                    <fieldset id="maintainWeightbreakfast" class="setWidth">
+                        <legend>Breakfast</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Oat Crunch Bowl</th>
+                                </tr>
+                            </thead>
+                                
+                            <tbody>
+                                <tr>
+                                    <td>2/3cup Oat Powder </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/3 Apple</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 Banana</td>
+                                </tr>
+
+                                <tr>
+                                    <td>20 Piece Almonds</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Hemp Seeds, 2sp Low Fat Yogurt</td>
+                                </tr>
+
+                                <tr>
+                                    <td>240ml Non Fat Milk</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' - cal-524, Protein-22g, Carbs-63g, fat-16g</td>
+                                </tr>
+
+                                <tr>
+                                    <td>scp-Scoop, sp-Spoon, 1 cup-125g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                    </fieldset>
+
+                    <fieldset id="maintainWeightLunch" class="setWidth">
+                        <legend>Lunch</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rice Super Bowl</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>2/3cup Brown Rice</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/4cup Chick Peas</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/4cup Kidney Beans</td>
+                                </tr>
+
+                                <tr>
+                                    <td>40g Soy Chunks</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3sp Green Peas, 2sp Onoion + Tomato</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3sp Green/Red Bell Pepper</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 sp Olive Oil</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-506, Protein-30g, Carbs-61g, Fat-13g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="maintainWeightDinner" class="setWidth">
+                        <legend>Dinner</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Panner(Indian Cheese) Sandwich</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>4 Slices of Wheat Bread</td>
+                                </tr>
+
+                                <tr>
+                                    <td>50g Panner(Indian Cheese)</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2 Onion Rings</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3-4 Slices of Tomato</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-470, Protein-22g, Carbs-60g, Fat-4g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="maintainWeightSnack1" class="setWidth">
+                        <legend>Snack 1</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tortilla Banana Roll</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1 Wheat Tortilla</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Peanut Butter</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 Banana</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Honey</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 cup Non Fat Milk or Greek Yogurt</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-457, Protein-20g, Carbs-60g, Fat-5g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="maintainWeightSnack2" class="setWidth">
+                        <legend>Snack 2</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Milk Shake</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>240ml Non Fat Milk</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1cup Frozen Banana/Mango</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Sunflower Seeds</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1cup Roasted Chickpeas</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-462, Protein-26g, Carbs-45g, Fat-14g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="maintainWeightSnack3" class="setWidth">
+                        <legend>Snack 3</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Yougurt & Nuts</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>240g Low Fat Yogurt</td>
+                                </tr>
+
+                                <tr>
+                                    <td>25g Walnuts</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-254, Protein-15g, Carbs-15g, Fat-14g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+                    <p>Total Macros' breakdown cal-2673 <br> You can drop or add Snacks in order to cutomise 
+                    your meal according to your specific Calories requirement </p>
+                </section>
+                <!--*********** Meal options for weight maintain ends here ******************************-->
+
+
+                <!--*********** Meal options for weight gain starts from here ******************************-->
+                <section id="gainWeight">
+                    <fieldset id="gainWeightBreakfast" class="setWidth">
+                        <legend>Breakfast</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Muscle Oats</th>
+                                </tr>
+                            </thead>
+                                
+                            <tbody>
+                                <tr>
+                                    <td>2/3cup Oats</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/4cup Cereals or Granola</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2/3scp Whey Protein</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Brans</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/8cup Raisin, 1/8cup Cranberries</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/8cup Crushed Almonds, 1/8cup Crushed Walnuts</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 Banana, 1/2 Apple</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' - cal-595, Protein-35g, Carbs-80g, fat-15g</td>
+                                </tr>
+
+                                <tr>
+                                    <td>scp-Scoop, sp-Spoon, 1 cup-125g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="gainWeightLunch" class="setWidth">
+                        <legend>Lunch</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Potato Bowl</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>140g Sweet Potato</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2cup Kidney Beans</td>
+                                </tr>
+
+                                <tr>
+                                    <td>50g Panner(Indian Cheese)</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 Green Pepper</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/4cup Spinach</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3sp Green Onion and 3sp Tomato</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2cup mango</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3 Egg Whites(Scrambled)</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-490, Protein-32g, Carbs-68g, Fat-10g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="gainWeightDinner" class="setWidth">
+                        <legend>Dinner</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Muscle Meat</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>2 Chichen Drumsticks(Legs)</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 Pineapple Ring</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 cup Crushed Broccoli</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/2 cup Crushed Cabbage</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1/4cup Kidney Beans and 1/4cup Chickpeas</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2sp chopped carrots and 2sp chopped Tomato</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-513, Protein-30g, Carbs-60g, Fat-17g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="gainWeightSnack1" class="setWidth">
+                        <legend>Snack 1</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Protein Power Snack</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1 slice Bread + 2 egg Omelet</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 slice Bread + 1/2cup mashed Cickpeas</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 Slice Bread + 1/2 Banana + 1sp Peanut Butter</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-536, Protein-30g, Carbs-68g, Fat-16g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="gainWeightSnack2" class="setWidth">
+                        <legend>Snack 2</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sweet Muscle Rice</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>2/3cup Brown Rice</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Honey</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Peanut Butter</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Peanuts</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1sp Black Raisins</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2/3 Banana</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2sp Yogurt + 2/3scp Whey Protein</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-597, Protein-33g, Carbs-78g, Fat-17g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+
+                    <fieldset id="gainWeightSnack3" class="setWidth">
+                        <legend>Snack 3</legend>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Protein Sweet</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1 egg White</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2/3scp Whey Protein</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3sp Peanuts + 1sp Raisins</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Macros' cal-279, Protein-25g, Carbs-11g, Fat-15g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+                    <p>Total Macros' breakdown cal-3010 <br> You can drop or add Snacks in order to cutomise 
+                    your meal according to your specific Calories requirement </p>
+                </section>
+                <!--*********** Meal options for weight maintain ends here ******************************-->
+            </article>
+    
+            <footer>
+                <nav>
+                    <a href="index_PSa23311.html">Home</a>
+                    <a href="NutritionSources_PSa23311.html">Nutrition Sources</a>
+                    <a href="CalorieGuide_PSa23311.html">Calorie Guide</a>
+                    <a href="MealGuide_PSa23311.html">Meal Guide</a>
+                </nav>
+            </footer>
+
+        </div>
+        <script src="js/script_PSa23311.js"></script>
+    </body>
+</html>

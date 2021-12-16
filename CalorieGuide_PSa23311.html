@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html lang ="en">
+    
+    <!--
+		Student Name: Parteek Saini
+		Student ID: 300323311
+    -->
+
+    <head>
+        <title>NutriGuide</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Parteek Saini">
+        <link href="css/style_PSa23311.css" rel="stylesheet" />
+    </head>
+
+    <body onload="currentWidth()">
+
+        <div id="wrapper">
+
+            <header>
+                <div id="head">
+                    <div id="movingDiv"><h1 id="h1">NutriGuide</h1></div>
+                </div>
+                
+                <nav>    
+                    <a href="index_PSa23311.html">Home</a>
+                    <a href="NutritionSources_PSa23311.html">Nutrition Sources</a>
+                    <a class="active_nav" href="CalorieGuide_PSa23311.html">Calorie Guide</a>
+                    <a href="MealGuide_PSa23311.html">Meal Guide</a>
+                </nav>
+            </header>
+    
+            <article>
+
+                <div id="background_image"></div>
+
+                <section>
+                    <form action="" method="GET" enctype="application/x-www-form-urlencoded">
+                        <fieldset>
+                            <legend>Calorie Guide Tool</legend>
+                            <div>
+                                <label for="fullName">Full Name</label>
+                                <input type="text" name="fullName" id="fullName" placeholder="Full Name" required>
+                            </div>
+
+                            <div>
+                                <label for="bodyWeight">Body Weight(Kg)</label>
+                                <input type="text" name="bodyWeight" id="bodyWeight" placeholder="For example: 65 or 80.5" required>
+                            </div>
+
+                            <div>
+                                <label for="height">Height in cm</label>
+                                <input type="text" name="height" id="height" placeholder="For example: 160 or 171.4" required>
+                            </div>
+
+                            <div>
+                                <label for="age">Age(10 to 90 years)</label>
+                                <input type="number" name="age" id="age" 
+                            min="10" max="90" step="1" required placeholder="For example: 35">
+                            </div>
+
+                            <div>
+                                <label for="gender">Gender</label>
+                                <input type="radio" name="gender" id="gender" value="male" required>Male
+                                <input type="radio" name="gender" id="gender" value="female">Female
+                            </div>
+
+                            <div>
+                                <label for="physicalActivity">Physical Activity</label>
+                                <input type="text" name="physicalActivity" id="physicalActivity" required list="physicalActivityList">
+                                <datalist id="physicalActivityList">
+                                    <option value="Low physical Activity">Spend most part of the day sitting</option>
+                                    <option value="Average Physical Activity">Spend cosiderable
+                                         amount of time of day on foot or walking</option>
+                                    <option value="Heavy Physical Activity">Spend most part of day on
+                                         foot or walking or doing heavy Physical Activity</option>
+                                </datalist>
+                            </div>
+
+                            <div>
+                                <label for="weightMaintance">Weight Maintance</label>
+                                <input type="text" name="weightMaintance" id="weightMaintance" required list="weightMaintanceList" required>
+                                <datalist id="weightMaintanceList">
+                                    <option value="Rapid Weight Loose">Want to lose 0.5kg weight per week</option>
+                                    <option value="Slow Weight Loose">Want to lose 0.2Kg weight per week</option>
+                                    <option value="Maintain Weight">Want to Maintain Existing Weight</option>
+                                    <option value="Slow Weight Gain">Want to gain 0.2Kg weight per week</option>
+                                    <option value="Rapid Weight Gain">Want to gain 0.5Kg weight per week</option>
+                                </datalist>
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Calculate Calorie" id="submit"
+                                onclick="return calculateCalorie(this.form)">
+
+                                <input type="reset" value="Reset Data" id="reset" onclick="return resetData(this.form);">
+                            </div>
+                            <div>
+                                <small id="disclaimer">
+                                    Disclaimer: Calorie Guide Tool is susceptible to show distorted data near extremities of age limit. 
+                                    For example=> A 90-year-old person can have some health-related issues for which calories requirement
+                                     may vary as opposed to shown in this tool. Similarly, a 10-year child is too young to maintain any 
+                                     calories intake requirements.
+                                </small>
+                            </div>
+                            <div id="out">
+                                <output id="output"></output>
+                            </div>
+                        </fieldset>
+
+                    </form>
+                </section>
+            </article>
+    
+            <footer>
+                <nav>
+                    <a href="index_PSa23311.html">Home</a>
+                    <a href="NutritionSources_PSa23311.html">Nutrition Sources</a>
+                    <a href="CalorieGuide_PSa23311.html">Calorie Guide</a>
+                    <a href="MealGuide_PSa23311.html">Meal Guide</a>
+                </nav>
+            </footer>
+
+        </div>
+        <script src="js/script_PSa23311.js"></script>
+    </body>
+</html>
