@@ -1,4 +1,5 @@
 
+// Test case for ssh keys
 /*******************Page-3(Calorie Guide) Javascript starts from here *****************************************/
 
 // This function is called when submit button is pressed
